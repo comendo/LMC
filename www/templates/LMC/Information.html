@@ -1,0 +1,82 @@
+<ion-view view-title="Liste {{ sousPage }}">
+	<ion-nav-bar class="bar-positive">
+        <ion-nav-back-button class="button-icon ion-arrow-left-c">
+        </ion-nav-back-button>
+      </ion-nav-bar>
+  <ion-content>
+    <ion-list>
+    <!--<ion-item>
+     <div id="login-container" class="pre-auth">This application requires access to your YouTube account.
+      Please <a href="#" ng-click="loginLink()" id="login-link">authorize</a> to continue.
+    </div>
+    <div id="buttons">
+      <button id="playlist-button" disabled onclick="createPlaylist()">Create a new Private Playlist</button>
+      <br>
+      <label>Current Playlist Id: <input id="playlist-id" value='' type="text"/></label>
+      <br>
+      <label>Video Id: <input id="video-id" value='GZG9G5txtaE' type="text"/></label><button onclick="addVideoToPlaylist()">Add to current playlist</button>
+    </div>
+    <h3>Playlist: <span id="playlist-title"></span></h3>
+    <p id="playlist-description"></p>
+    <div id="playlist-container">
+      <span id="status">No Videos</span>
+    </div>
+     </ion-item>-->
+     <ion-item><div ng-controller="OverlayDemoCtrl">
+    <youtube-player width="100%" keep-aspect-ratio video-id="id" ng-model="video" yt-fullscreen>
+        <player-panel  class="bottom-panel ng-show">
+            <player-progress-bar hover-indicator></player-progress-bar>
+            <div class="controls">
+                <span class="control-element">
+                    <player-play show-if-player-is="cued,unstarted,ended,paused">
+                        <i class="fa fa-play"></i>
+                    </player-play>
+                    <player-pause show-if-player-is="buffering,playing">
+                        <i class="fa fa-pause"></i>
+                    </player-pause>
+                </span>
+                <span class="control-element">
+                    <player-volume-horizontal>
+                        <i show-if-muted=true class="fa fa-volume-off"></i>
+                        <i show-if-muted=false class="fa fa-volume-up"></i>
+                    </player-volume-horizontal>
+                </span>
+                <span class="control-element">
+                    <span player-current-time>0:00</span> / <span player-total-time>0:00</span>
+                </span>
+                <span class="control-element" show-if-full-screen-enabled  style="float:right">
+                    <player-toggle-fullscreen>
+                        <i show-if-fullscreen=true class="fa fa-expand"></i>
+                        <i show-if-fullscreen=false class="fa fa-compress"></i>
+                    </player-toggle-fullscreen>
+                </span>
+                <span class="control-element dropdown-control" dropdown style="float:right">
+                    <div class="dropdown-toggle"><span player-current-speed >1</span>x</div>
+                    <ul class="dropdown-control-options dropdown-menu">
+                        <li player-repeat-available-speed reverse ng-class="{'active': $speed == video.getPlaybackRate()}">
+                            <a dropdown-toggle player-set-speed="$speed">{{$speed}}x</a>
+                        </li>
+                    </ul>
+                </span>
+                <span class="control-element dropdown-control" dropdown style="float:right">
+                    <div class="dropdown-toggle"><span player-current-quality intended-quality show-real-auto >Auto</span></div>
+                    <ul class="dropdown-control-options dropdown-menu">
+                        <li player-repeat-available-quality ng-class="{'active': $quality == video.getHumanIntendedPlaybackQuality()}">
+                            <a dropdown-toggle player-set-quality="$quality">{{$quality}}</a>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+        </player-panel>
+    </youtube-player>
+</div>
+</ion-item>
+     <ion-item>
+     	<!--<youtube-player video-id="'i_mKY2CQ9Kk'"></youtube-player>-->
+     </ion-item>
+     <ion-item>3</ion-item>
+     <ion-item>4</ion-item>
+     <ion-item>5</ion-item>
+     </ion-list>
+     </ion-content>
+     </ion-view>

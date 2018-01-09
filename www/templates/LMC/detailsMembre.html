@@ -1,0 +1,20 @@
+<ion-view view-title="{{page}}">
+	<ion-content> 
+		<div class="list">
+		<div class="item item-divider">
+			    Détails de {{data[0]}} {{data[3]}} {{data[2]}}
+			</div>
+			<form>
+  <label class="item item-input" ng-repeat="(k,v) in label">
+    <span class="input-label">{{v}} :</span>
+    <input ng-model="data[k]" type="text" placeholder="{{v}}" ng-change="hydrate(data)">
+  </label>
+  <label class="item item-input">
+    <div class="padding item item-input">
+		<button type="button" class="button button-block button-positive" id="submit" ng-click="submitForm(data)">Valider</button>
+	</div>
+  </label> 
+</form>                                                       
+		</div>
+	</ion-content> 
+</ion-view>

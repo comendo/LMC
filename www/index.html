@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="LMC, Les mioches CARMONT">
+    <meta name="author" content="Come'N Do">
+    <link rel="icon" type="image/png" href="img/logo_no.png" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Les Mioches CARMONT</title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed for Les Mioches Carmont!!'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<!--<script type="text/javascript" src="js/modernizr-2.8.3.min.js"></script> 	
+	<script type="text/javascript" src="js/moment.js"></script> 
+	<script type="text/javascript" src="js/moment-with-locales.js"></script> 
+	<script src="/socket.io/socket.io.js"></script>-->
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/skrollr.min.js"></script>
+    <script src="js/skrollr.dir.js"></script>
+    <!--<script type="text/javascript">
+	window.onload = function() {
+   var s = skrollr.init();
+   console.log("SKROLLR1//////////////////////");
+};
+	</script>-->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <!--general-->
+   <!-- <script src="templates/routes.js"></script>
+    <script src="templates/controllers.js"></script>-->
+    <!--Accueil-->
+    <script src="templates/LMC/routes.js"></script>
+    <script src="templates/LMC/controllers.js"></script>
+
+    <!-- code pour firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-messaging.js"></script>    
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyDKvv-cxo7ss8uIwz8xtdV8E8P2poDMykA",
+	    authDomain: "les-mioches-carmont.firebaseapp.com",
+	    databaseURL: "https://les-mioches-carmont.firebaseio.com",
+	    projectId: "les-mioches-carmont",
+	    storageBucket: "les-mioches-carmont.appspot.com",
+	    messagingSenderId: "183610360923"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+  </head>
+
+  <body ng-app="starter">
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>

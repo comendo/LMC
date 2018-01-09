@@ -1,0 +1,28 @@
+<ion-view view-title="{{page}}">
+	<ion-content> 
+		<div class="list">
+		<div class="item item-divider">
+			    Détails de {{data[0]}} {{data[3]}}{{data[2]}}
+			</div>
+			<form>
+  <label class="item item-input" ng-repeat="(k,v) in label">
+    <span class="input-label">{{v}} :</span>
+    <input ng-model="data[k]" type="text" placeholder="{{v}}" ng-change="hydrate(data)">
+  </label>
+  <label class="item item-input">
+    <div class="padding item item-input">
+		<button type="button" class="button button-block button-positive" id="submit" ng-click="submitForm(data)">Valider</button>
+	</div>
+  </label> 
+</form>                                                                                               
+		   <!-- <div class="item item-divider">
+			    Détails de {{data[0]}} {{data[1]}} {{data[2]}}
+			</div>
+	  		<a class="item item-avatar" href="#LMC/{{page}}/{{i}}/details" ng-repeat="(i,j) in data">
+		      <img src="img/logo_no.png" width="53" height="44" />
+		      <h2>{{j[0]}}<span ng-if="j[0]=='M'">.</span>  {{j[1]}} {{j[2]}}</h2>
+		      <p>{{j[6]}}</p>
+		    </a>-->
+		</div>
+	</ion-content> 
+</ion-view>

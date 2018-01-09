@@ -1,0 +1,14 @@
+<ion-view view-title="{{page}}">
+	<ion-content> 
+		<div class="list">
+		    <div class="item item-divider">
+			    Membres de LMC
+			</div>
+	  		<a class="item item-avatar" href="#LMC/{{page}}/{{data1[i]}}/details" ng-repeat="(i,j) in data">
+		      <img src="img/logo_no.png" width="53" height="44" />
+		      <h2>{{j[0]}}<!--<span ng-if="j[0]=='M'">.</span>-->  {{j[3]}} {{j[2]}}</h2>
+		      <p>{{j[7]}}</p>
+		    </a>
+		</div>
+	</ion-content> 
+</ion-view>
